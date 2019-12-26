@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-eqiuv="content-type" content="text/html; charset=windows-1252">
+        <meta charset="utf-8">
+        <title>
+            {{ the_title }}
+        </title>
+        <link rel="stylesheet" href="static/dcc.css">
+    </head>
+    <body>
+        <h1>
+            {{ the_heading }}
+        </h1>
+        <form method="POST" action="/character_funnel" class="check-options">
+            <p><input type="checkbox" name="suitability" checked /> Check suitability<sup>1</sup></p>
+            <p><input type="checkbox" name="nohuman" /> No humans!<sup>2</sup></p>
+            <p><input type="checkbox" name="nodwarf" /> No dwarves!<sup>2</sup></p>
+            <p><input type="checkbox" name="noelf" /> No elves!<sup>2</sup></p>
+            <p><input type="checkbox" name="nohalfling" /> No halflings!<sup>2</sup></p>
+            <p><input type="submit" value="Let's roll!" /></p>
+        </form>
+        <p class="footnote">[<sup>1</sup>] Attributes are rolled with 3d6.<br />If 'Check Suitability' is checked, the total attribute modifiers of a character will be added up, and if the total is less than 0, the scores are all rerolled. This will go on until a character with less terrible scores is rolled up.<br />If 'Check Suitability' is NOT checked all attributes rolls are taken as is, even if they are completely terrible.
+        </p>
+        <p class="footnote">[<sup>2</sup>] You can exclude any of the four player character races from your character sheet, but if you check all of them, the program will ignore your choices and just include all of them as possibilities for characters on your sheet.
+        </p>
+    </body>
+</html>
